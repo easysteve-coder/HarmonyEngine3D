@@ -1,0 +1,82 @@
+# Jazz Chord Network – HarmonyEngine3D
+# Format:
+#   chord    <name> <midi1> <midi2> <midi3> <midi4>
+#   neighbor <source> <target> <weight>
+#
+# Gewichtungen: 1.0 = sehr stark, 0.65 = schwach
+
+# ═══════════════════════════════════════════
+#  AKKORDE
+# ═══════════════════════════════════════════
+
+# Diatonisch in C-Dur
+chord Cmaj7    60 64 67 71
+chord Dm7      62 65 69 72
+chord Em7      64 67 71 74
+chord Fmaj7    65 69 72 76
+chord G7       67 71 74 77
+chord Am7      69 72 76 79
+chord Bm7b5    71 74 77 81
+
+# Sekundärdominanten und erweiterter Raum
+chord Gmaj7    67 71 74 78
+chord D7       62 66 69 72
+chord A7       69 73 76 79
+chord E7       64 68 71 74
+chord Bbmaj7   70 74 77 81
+chord Ebmaj7   63 67 70 74
+chord Ab7      68 72 75 78
+chord Fm7      65 68 72 75
+
+# ═══════════════════════════════════════════
+#  NACHBAR-BEZIEHUNGEN
+# ═══════════════════════════════════════════
+
+# ii–V–I in C
+neighbor Dm7     G7      1.0
+neighbor G7      Cmaj7   1.0
+
+# ii–V–I in G
+neighbor Am7     D7      1.0
+neighbor D7      Gmaj7   1.0
+
+# ii–V–I sekundär (Richtung D-Moll)
+neighbor Em7     A7      0.95
+neighbor A7      Dm7     0.90
+
+# ii–V–I sekundär (Richtung A-Moll)
+neighbor Bm7b5   E7      0.90
+neighbor E7      Am7     0.90
+
+# Tonika-Bewegungen
+neighbor Cmaj7   Am7     1.0
+neighbor Cmaj7   Em7     0.85
+neighbor Cmaj7   Fmaj7   0.90
+neighbor Cmaj7   G7      0.80
+neighbor Gmaj7   Em7     0.80
+neighbor Gmaj7   Am7     0.75
+neighbor Gmaj7   Cmaj7   0.90
+
+# Subdominante und Quint-Zirkel
+neighbor Fmaj7   Bbmaj7  0.90
+neighbor Bbmaj7  Ebmaj7  0.85
+neighbor Fmaj7   Dm7     0.85
+neighbor Am7     Fmaj7   0.85
+
+# Modal Interchange (geliehen aus Paralell-Moll)
+neighbor Cmaj7   Bbmaj7  0.75
+neighbor Cmaj7   Ebmaj7  0.70
+neighbor Cmaj7   Fm7     0.65
+neighbor Fm7     Bbmaj7  0.85
+
+# Tritonussubstitutionen
+neighbor Ab7     Cmaj7   0.85
+neighbor Ab7     G7      0.90
+neighbor G7      Ab7     0.80
+
+# Rückwege und Zyklen
+neighbor Em7     Cmaj7   0.80
+neighbor Dm7     Fmaj7   0.75
+neighbor Bm7b5   Em7     0.80
+neighbor Ebmaj7  Cmaj7   0.70
+neighbor Bbmaj7  Cmaj7   0.70

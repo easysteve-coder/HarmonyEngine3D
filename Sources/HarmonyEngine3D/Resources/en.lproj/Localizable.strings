@@ -1,0 +1,235 @@
+/* Localizable.strings – English (en)
+   HarmonyEngine3D
+
+   Keys: domain.category.item (lowercase, dot-separated)
+   All keys must be present in both language files.
+   DSP terms (Attack, Reverb, ADSR, MIDI etc.) are intentionally kept in English
+   in both files – they are internationally standardised in professional audio. */
+
+// ── Settings Panel ────────────────────────────────────────────────────────
+
+"settings.title"                    = "⚙  SETTINGS";
+"settings.close.hint"               = "Tab  →  close";
+
+// Section: World (Round 023 / E-03) — Explore vs. HarmonyWeb
+"settings.section.world"            = "WORLD";
+"settings.world.mode.explore"       = "Explore";
+"settings.world.mode.harmonyweb"    = "HarmonyWeb";
+"settings.world.restart.desc"       = "Takes effect after the next app restart.";
+"settings.world.imported.header"    = "IMPORTED MAPS";
+"settings.world.import.folder.label" = "Import folder (drop exported .json here):";
+
+// Section: MIDI input (round 073 / W-04)
+"settings.section.midiin"           = "MIDI INPUT";
+"settings.midiin.enabled"           = "MIDI input active";
+"settings.midiin.virtual.desc"      = "Virtual destination \"HarmonyEngine3D Input\" — DAWs and other programs can send directly to the app.";
+"settings.midiin.sources.header"    = "EXTERNAL SOURCE";
+"settings.midiin.source.none"       = "None (virtual destination only)";
+"settings.midiin.state.unavailable" = "unavailable";
+"settings.midiin.channel.desc"      = "Listens on all MIDI channels. Channels 1-4 play CH0-CH3 (chords, bass, melody, chord tones), 5-16 play CH0. Preliminary.";
+"settings.midiin.unavailable.hint"  = "The selected device is currently missing. The selection is kept and takes effect again once it returns.";
+
+// CC -> performance macro (round 074 / W-05). Default numbers are preliminary.
+"settings.midiin.macro.header"      = "CONTROLLER → MACRO";
+"settings.midiin.macro.motion"      = "Motion (morph movement)";
+"settings.midiin.macro.color"       = "Color (filter)";
+"settings.midiin.macro.space"       = "Space (room amount)";
+"settings.midiin.macro.focus"       = "Focus (source balance)";
+"settings.midiin.macro.desc"        = "Listens on all MIDI channels. A CC number belongs to one macro only; reassigning it leaves the other one on \"—\". Below CC 0 or above CC 119 the assignment is cleared. Factory numbers are preliminary.";
+
+// Section: Tonal Network
+"settings.section.network"          = "TONAL NETWORK";
+"settings.show.edges"               = "Show network edges";
+"settings.edges.desc"               = "Lines between connected chord nodes.\nUpdates automatically while flying.";
+
+// Section: Energy
+"settings.section.energy"           = "ENERGY";
+"settings.energy.label"             = "Energy";
+"settings.energy.desc"              = "0.0 = tonal · step-wise · neighbors preferred\n1.0 = wild · jumps · all chords equally likely\nKeyboard: [ down  ] up";
+
+// Section: Autopilot
+"settings.section.autopilot"        = "AUTOPILOT";
+"settings.autopilot.active"         = "Autopilot active  (Space / ✈)";
+"settings.autopilot.speed"          = "Speed";
+"settings.autopilot.desc"           = "Flies along the strongest network edges.\nSpace key to toggle.";
+
+// Section: Magnetic
+"settings.section.magnet"           = "MAGNETIC";
+"settings.magnet.strength"          = "Strength";
+"settings.magnet.radius"            = "Radius (m)";
+"settings.magnet.desc"              = "0 = off · subtle attraction to nearest chord.\nOnly active in manual flight (not in Autopilot).";
+
+// Section: Rendering
+"settings.section.rendering"        = "RENDERING";
+"settings.hq.rendering"             = "High Quality  (PBR + Shadows)";
+"settings.hq.active.desc"           = "PBR materials, soft shadows active";
+"settings.hq.inactive.desc"         = "Phong fallback, no shadows  (performant)";
+"settings.color.scheme"             = "Color Scheme";
+"settings.color.by.type"            = "Quality";
+"settings.color.by.circle"          = "Circle of Fifths";
+"settings.color.type.desc"          = "Color by chord type  (maj7=Gold, m7=Blue, 7=Orange…)";
+"settings.color.circle.desc"        = "Color by root note in circle of fifths  (C=Red, G=Orange…)";
+"settings.chord.style"              = "Chord Style";
+"settings.visual.style.spheres"     = "🔮 Spheres";
+"settings.visual.style.voxel"       = "🐷 Voxel";
+"settings.visual.style.minimal"     = "◻ Minimal";
+"settings.visual.style.c64"         = "👾 C64";
+"settings.visual.style.pril"        = "🌸 Pril";
+"settings.visual.mode.0.desc"       = "Colored sphere  ·  PBR or Phong depending on quality level";
+"settings.visual.mode.1.desc"       = "maj7=Creeper  ·  m7=Enderman  ·  m7b5=Bat  ·  Rest=Pig";
+"settings.visual.mode.2.desc"       = "Wireframe sphere  ·  glows in chord color  ·  rotates";
+"settings.visual.mode.3.desc"       = "C64 color palette  ·  Sprite block  ·  Cursor blink  ·  flat shading";
+"settings.visual.mode.4.desc"       = "Pril retro flower 🌸  ·  6 petals  ·  rotates gently";
+"settings.easter.theme"             = "🐣 Easter Theme";
+"settings.easter.theme.desc"        = "Easter eggs · Carrots · Daffodils  ·  replaces all visuals";
+"settings.morphing.intensity"       = "Morphing Intensity";
+"settings.morphing.desc"            = "0 = off · neighboring nodes drift gently on chord change.\nPure render effect — no influence on triggers or sound.";
+
+// Section: Object Sizes
+"settings.section.object.sizes"     = "OBJECT SIZES";
+"settings.chord.sphere"             = "Chord Sphere";
+"settings.bass.portal"              = "Bass Portal";
+"settings.melody.cloud"             = "Melody Cloud";
+
+// Section: Trigger Radii
+"settings.section.trigger.radii"    = "TRIGGER RADII";
+"settings.trigger.chords"           = "Chords";
+"settings.trigger.portals"          = "Portals";
+"settings.trigger.clouds"           = "Clouds";
+
+// Section: Density
+"settings.section.density"          = "DENSITY  (% of Chunks)";
+"settings.density.chords"           = "Chords";
+"settings.density.portals"          = "Portals";
+"settings.density.clouds"           = "Clouds";
+
+// Section: Speed
+"settings.section.speed"            = "SPEED";
+"settings.max.speed"                = "Max Speed";
+"settings.thrust.force"             = "Thrust Force";
+
+// Section: Controls
+"settings.section.controls"         = "CONTROLS  (RIGHT STICK)";
+"settings.invert.pitch"             = "Invert Pitch  (Y-Axis)";
+"settings.yaw.sensitivity"          = "Yaw Sensitivity";
+"settings.pitch.sensitivity"        = "Pitch Sensitivity";
+
+// Section: Voice Leading
+"settings.section.voice.leading"    = "VOICE LEADING";
+"settings.voice.leading"            = "Voice Leading  (CH 1)";
+
+// Section: Audio Output
+"settings.section.audio.output"     = "AUDIO OUTPUT";
+"settings.output.label"             = "Output";
+"settings.output.midi"              = "MIDI (external)";
+"settings.output.internal"          = "Internal Audio";
+"settings.output.desc"              = "Takes effect on next app launch.\nMIDI: CoreMIDI Virtual Output → Mainstage\nInternal Audio: AVAudioUnitSampler, macOS-local";
+"settings.voiceEngine.label"        = "Voice";
+"settings.voiceEngine.legacy"       = "Classic";
+"settings.voiceEngine.atmospheric"  = "Atmospheric";
+"settings.voiceEngine.desc"         = "Takes effect immediately. Switching stops sounding notes.\nClassic: oscillator + filter + ADSR\nAtmospheric: wavetable morph, texture, modulation matrix";
+
+// Section: MIDI Velocities
+"settings.section.midi.velocities"  = "MIDI  VELOCITIES";
+"settings.chord.vel"                = "Chords  (CH 1)";
+"settings.bass.vel"                 = "Bass     (CH 2)";
+"settings.melody.vel.max"           = "Melody  (CH 3) max";
+
+// Section: Melody Tempo
+"settings.section.melody.tempo"     = "MELODY TEMPO";
+"settings.tempo.factor"             = "Tempo Factor";
+
+// Section: Bass Behavior
+"settings.section.bass.behavior"    = "BASS BEHAVIOR";
+"settings.bass.hold"                = "Hold  (holds until next portal)";
+
+// Section: Sensors
+"settings.section.sensors"          = "SENSORS  (GYRO + TOUCHPAD → CC)";
+"settings.sensors.master"           = "Sensors active  (Master)";
+"settings.gyro.tilt"                = "Gyro Tilt active  (Roll / Pitch)";
+"settings.gyro.roll.cc"             = "Gyro Roll  →  CC";
+"settings.gyro.pitch.cc"            = "Gyro Pitch →  CC";
+"settings.gyro.sensitivity"         = "Sensitivity";
+"settings.rotation.active"          = "Rotation Rate active  (Angular Velocity)";
+"settings.rotation.cc"              = "Rotation Rate  →  CC";
+"settings.touchpad.active"          = "Touchpad X/Y active";
+"settings.touchpad.x.cc"            = "Touchpad X  →  CC";
+"settings.touchpad.y.cc"            = "Touchpad Y  →  CC";
+"settings.midi.channel"             = "MIDI Channel";
+
+// Section: Chord Types
+"settings.section.chord.types"      = "CHORD TYPES";
+"settings.chord.maj7"               = "maj7  — Major 7th";
+"settings.chord.m7"                 = "m7    — Minor 7th";
+"settings.chord.dom7"               = "Dom7  — Dominant 7th";
+"settings.chord.m7b5"               = "m7b5  — Half Diminished";
+
+// Section: Language
+"settings.section.language"         = "LANGUAGE";
+"settings.language.label"           = "Language";
+
+// ── Controls Overlay ──────────────────────────────────────────────────────
+
+"controls.title"                    = "PS5 CONTROLS";
+"controls.close.hint"               = "or Click  →  close";
+
+// Left column
+"controls.l2.desc"                  = "Thrust backward";
+"controls.l1.desc"                  = "Melody Preset ←";
+"controls.lstick.button"            = "L.Stick  ↑↓←→";
+"controls.lstick.desc"              = "Play chord tones\nRoot · Third · Fifth · Seventh";
+"controls.l3.button"                = "L3  (press stick)";
+"controls.l3.desc"                  = "+8va tones  (Toggle: 1× on, 1× off)";
+"controls.dpad.button"              = "D-Pad  ↑";
+"controls.dpad.desc"                = "Bass Hold / Trigger";
+
+// Right column
+"controls.r2.desc"                  = "Thrust forward";
+"controls.r1.desc"                  = "Melody Preset →";
+"controls.rstick.button"            = "R.Stick";
+"controls.rstick.desc"              = "Look Direction\nYaw / Pitch";
+"controls.r3.button"                = "R3  (press stick)";
+"controls.r3.desc"                  = "Full Brake";
+"controls.triangle.desc"            = "All Notes Off";
+"controls.options.desc"             = "This Overview";
+
+// MIDI channel legend
+"controls.midi.ch1"                 = "CH 1  ·  CHORDS";
+"controls.midi.ch2"                 = "CH 2  ·  BASS";
+"controls.midi.ch3"                 = "CH 3  ·  MELODY";
+"controls.midi.ch4"                 = "CH 4  ·  CHORD TONES";
+
+// ── Audio Mixer Panel ─────────────────────────────────────────────────────
+
+"mixer.title"                       = "AUDIO MIXER";
+"mixer.vol"                         = "VOL";
+"mixer.section.pan"                 = "PAN";
+"mixer.section.reverb"              = "REVERB";
+"mixer.reverb.preset"               = "Preset";
+"mixer.reverb.mix"                  = "Mix";
+"mixer.section.delay"               = "DELAY TAPS";
+"mixer.delay.time"                  = "Time";
+"mixer.delay.feedback"              = "Feedback";
+"mixer.delay.mix"                   = "Mix";
+"mixer.delay.pan"                   = "Pan";
+"mixer.section.adsr"                = "ADSR";
+"mixer.adsr.attack"                 = "Attack";
+"mixer.adsr.decay"                  = "Decay";
+"mixer.adsr.sustain"                = "Sustain";
+"mixer.adsr.release"                = "Release";
+"mixer.section.filter"              = "FILTER  (LP)";
+"mixer.filter.cutoff"               = "Cutoff";
+"mixer.filter.resonance"            = "Resonance";
+"mixer.section.osc"                 = "OSCILLATOR";
+"mixer.osc.waveform"                = "Waveform";
+"mixer.section.unison"              = "UNISON";
+"mixer.unison.voices"               = "Voices";
+"mixer.unison.detune"               = "Detune";
+"mixer.unison.spread"               = "Spread";
+
+// ── HUD / Dashboard ───────────────────────────────────────────────────────
+
+"hud.melody.preset"                 = "MELODY PRESET";
+"hud.melody"                        = "Melody";
+"hud.chord.tones"                   = "Chord Tones  ·  ←↑→↓";
+"hud.chords"                        = "Chords";

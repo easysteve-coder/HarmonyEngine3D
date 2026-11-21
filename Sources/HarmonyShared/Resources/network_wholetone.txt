@@ -1,0 +1,88 @@
+# Ganzton (Whole Tone) – Debussy / Impressionismus
+# Prinzip: Jeder Schritt ist eine große Sekunde → vollständige Symmetrie
+# Nur 2 verschiedene Ganzton-Skalen möglich:
+#   Skala 1: C  D  E  F#  Ab  Bb
+#   Skala 2: Db Eb F  G   A   B
+# Charakter: schwebend, ohne Tonikagefühl, traumhaft
+
+# ═══════════════════════════════════════════
+#  GANZTON-SKALA 1: C D E F# Ab Bb
+# ═══════════════════════════════════════════
+
+# Augmentierte Dreiklänge (alle äquivalent innerhalb der Skala)
+chord Caug    60 64 68    # C augmentiert  = C–E–G#
+chord Daug    62 66 70    # D augmentiert  = D–F#–A#
+chord Eaug    64 68 72    # E augmentiert  = E–G#–C
+
+# Dominant 7 #5 (der typische Ganzton-Akkord: Debussy, Ravel)
+chord C7s5    60 64 68 70   # C7#5  = C–E–G#–Bb
+chord D7s5    62 66 70 72   # D7#5  = D–F#–A#–C
+chord E7s5    64 68 72 74   # E7#5  = E–G#–C–D
+chord Ab7s5   68 72 76 78   # Ab7#5 = Ab–C–E–Gb
+chord Bb7s5   70 74 78 80   # Bb7#5 = Bb–D–F#–Ab
+
+# Ganzton-Quartenakkorde (Debussy-typisch)
+chord Csus2   60 62 67    # C–D–G  (Ganzton-Fragmente)
+chord Gsus2   67 69 74    # G–A–D
+
+# ═══════════════════════════════════════════
+#  GANZTON-SKALA 2: Db Eb F G A B
+# ═══════════════════════════════════════════
+
+chord Dbaug   61 65 69    # Db augmentiert = Db–F–A
+chord Ebaug   63 67 71    # Eb augmentiert = Eb–G–B
+chord Faug    65 69 73    # F augmentiert  = F–A–C# (= Db aug)
+
+chord Db7s5   61 65 69 71   # Db7#5 = Db–F–A–B
+chord Eb7s5   63 67 71 73   # Eb7#5 = Eb–G–B–Db
+chord F7s5    65 69 73 75   # F7#5  = F–A–C#–Eb
+chord G7s5    67 71 75 77   # G7#5  = G–B–D#–F
+chord A7s5    69 73 77 79   # A7#5  = A–C#–E#–G
+
+# ═══════════════════════════════════════════
+#  GANZTON-BEZIEHUNGEN
+# ═══════════════════════════════════════════
+
+# Innerhalb Skala 1: alle Akkorde gleichberechtigt (schwebend, kein Zentrum)
+neighbor Caug   Daug    1.0
+neighbor Daug   Eaug    1.0
+neighbor Eaug   Caug    1.0   # Zyklus: C–D–E–C
+neighbor C7s5   D7s5    1.0
+neighbor D7s5   E7s5    1.0
+neighbor E7s5   Ab7s5   1.0
+neighbor Ab7s5  Bb7s5   1.0
+neighbor Bb7s5  C7s5    1.0   # Dominanten-Zyklus in Skala 1
+
+# Innerhalb Skala 2
+neighbor Dbaug  Ebaug   1.0
+neighbor Ebaug  Faug    1.0
+neighbor Faug   Dbaug   1.0
+neighbor Db7s5  Eb7s5   1.0
+neighbor Eb7s5  F7s5    1.0
+neighbor F7s5   G7s5    1.0
+neighbor G7s5   A7s5    1.0
+neighbor A7s5   Db7s5   1.0
+
+# Triton-Verbindungen (halb Step zwischen den Skalen = Tritonus-Sprung)
+neighbor C7s5   Db7s5   0.90   # Debussy springt gerne zwischen Skalen
+neighbor D7s5   Eb7s5   0.90
+neighbor E7s5   F7s5    0.85
+neighbor Ab7s5  A7s5    0.85
+neighbor Bb7s5  Db7s5   0.80
+
+# Augmentierter → Dom7#5 (Verdichtung)
+neighbor Caug   C7s5    0.85
+neighbor Daug   D7s5    0.85
+neighbor Eaug   E7s5    0.80
+neighbor Dbaug  Db7s5   0.85
+neighbor Ebaug  Eb7s5   0.80
+
+# Auflösung nach außen (Ganzton → konventionelle Akkorde ist selten aber möglich)
+neighbor C7s5   Caug    0.75
+neighbor Db7s5  Dbaug   0.75
+
+# Ganzton-Schweben: nahezu alle Akkorde derselben Skala sind gleichwertig
+neighbor Caug   E7s5    0.80
+neighbor Daug   Ab7s5   0.80
+neighbor C7s5   Eaug    0.75
+neighbor Ab7s5  Daug    0.75

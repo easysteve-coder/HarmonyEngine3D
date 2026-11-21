@@ -1,0 +1,77 @@
+# The Harmony Codex (Song) – Steven Wilson, 2023
+#
+# Struktur des Stücks: eine harmonische "Infinite Staircase"
+#   X_dur → X_moll → (X + Quinte)_dur → (X + Quinte)_moll → …
+#
+# Immer dasselbe Muster, immer um eine Quinte aufwärts:
+#   Dur-Akkord → gleicher Akkord Moll → Quinte höher Dur → …
+#
+# Alle 24 Akkorde (12 Dur + 12 Moll), nach 9 Minuten wieder am Anfang.
+# Kein Tonikagefühl – nur das ewige Weitersteigen, wie eine Shepard-Tonleiter.
+#
+# E → Em → B → Bm → F# → F#m → C# → C#m → Ab → Abm
+#   → Eb → Ebm → Bb → Bbm → F → Fm → C → Cm → G → Gm
+#   → D → Dm → A → Am → (E)
+#
+# Verbindungen: nur vorwärts in der Kette (kein Zurück = keine Auflösung).
+# Das erzeugt das "immer weiter, nie ankommen"-Gefühl des Stücks.
+
+# ═══════════════════════════════════════════
+#  DIE 24 AKKORDE DER STAIRCASE
+# ═══════════════════════════════════════════
+
+chord E     64 68 71       # E-Dur   – Startpunkt
+chord Em    64 67 71       # e-Moll
+chord B     59 63 66       # H-Dur
+chord Bm    59 62 66       # h-Moll
+chord Fis   66 70 73       # Fis-Dur  (F#)
+chord Fism  66 69 73       # fis-Moll (F#m)
+chord Cis   61 65 68       # Cis-Dur  (C#)
+chord Cism  61 64 68       # cis-Moll (C#m)
+chord Ab    68 72 75       # As-Dur   (G#/Ab)
+chord Abm   68 71 75       # as-Moll  (G#m/Abm)
+chord Eb    63 67 70       # Es-Dur   (D#/Eb)
+chord Ebm   63 66 70       # es-Moll  (D#m/Ebm)
+chord Bb    70 74 77       # B-Dur    (A#/Bb)
+chord Bbm   70 73 77       # b-Moll   (A#m/Bbm)
+chord F     65 69 72       # F-Dur
+chord Fm    65 68 72       # f-Moll
+chord C     60 64 67       # C-Dur
+chord Cm    60 63 67       # c-Moll
+chord G     67 71 74       # G-Dur
+chord Gm    67 70 74       # g-Moll
+chord D     62 66 69       # D-Dur
+chord Dm    62 65 69       # d-Moll
+chord A     69 73 76       # A-Dur
+chord Am    69 72 76       # a-Moll
+
+# ═══════════════════════════════════════════
+#  DIE STAIRCASE-KETTE (nur vorwärts)
+#  Dur → Moll (gleicher Grundton): 1.0
+#  Moll → Dur (Quinte höher):      1.0
+# ═══════════════════════════════════════════
+
+neighbor E     Em    1.0    # Dur → Moll
+neighbor Em    B     1.0    # Moll → Quinte rauf
+neighbor B     Bm    1.0
+neighbor Bm    Fis   1.0
+neighbor Fis   Fism  1.0
+neighbor Fism  Cis   1.0
+neighbor Cis   Cism  1.0
+neighbor Cism  Ab    1.0
+neighbor Ab    Abm   1.0
+neighbor Abm   Eb    1.0
+neighbor Eb    Ebm   1.0
+neighbor Ebm   Bb    1.0
+neighbor Bb    Bbm   1.0
+neighbor Bbm   F     1.0
+neighbor F     Fm    1.0
+neighbor Fm    C     1.0
+neighbor C     Cm    1.0
+neighbor Cm    G     1.0
+neighbor G     Gm    1.0
+neighbor Gm    D     1.0
+neighbor D     Dm    1.0
+neighbor Dm    A     1.0
+neighbor A     Am    1.0
+neighbor Am    E     1.0    # Schließt die Schleife → zurück zum Anfang

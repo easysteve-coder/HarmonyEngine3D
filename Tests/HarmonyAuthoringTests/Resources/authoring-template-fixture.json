@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "id": "authoring-template-fixture",
+  "name": "HarmonyAuthoring Template Fixture (K-02)",
+  "layers": [
+    { "id": "l1", "name": "Layer 1", "relationTypes": ["V-I"] }
+  ],
+  "nodes": [
+    { "id": "n1", "root": 0, "type": "maj7", "function": "tonic", "midiNotes": [60, 64, 67, 71] },
+    { "id": "n2", "root": 5, "type": "dom7", "function": "dominant", "midiNotes": [65, 69, 72, 75] }
+  ],
+  "edges": [
+    { "id": "e1", "source": "n1", "target": "n2", "relationTypes": ["V-I"], "directed": true, "layers": ["l1"] }
+  ]
+}

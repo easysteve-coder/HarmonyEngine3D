@@ -1,0 +1,83 @@
+# Blues – I–IV–V Dominantenfeld
+# Prinzip: Alle Akkorde sind Dominant-Septakkorde (blue notes, Spannung)
+# Struktur: 12-Bar-Blues in allen 12 Tonarten
+
+# ═══════════════════════════════════════════
+#  DOMINANT-SEPTAKKORDE (alle 12 Töne)
+# ═══════════════════════════════════════════
+
+chord C7    60 64 67 70
+chord F7    65 69 72 75
+chord G7    67 71 74 77
+chord D7    62 66 69 72
+chord A7    69 73 76 79
+chord E7    64 68 71 74
+chord B7    71 75 78 81
+chord Gb7   66 70 73 76
+chord Db7   61 65 68 71
+chord Ab7   68 72 75 78
+chord Eb7   63 67 70 73
+chord Bb7   70 74 77 80
+
+# ═══════════════════════════════════════════
+#  12-BAR BLUES BEZIEHUNGEN
+# ═══════════════════════════════════════════
+
+# I → IV (bar 1–4 → bar 5)
+neighbor C7   F7   1.0
+neighbor G7   C7   1.0
+neighbor D7   G7   1.0
+neighbor A7   D7   1.0
+neighbor E7   A7   1.0
+neighbor B7   E7   1.0
+neighbor F7   Bb7  1.0
+neighbor Bb7  Eb7  1.0
+neighbor Eb7  Ab7  1.0
+neighbor Ab7  Db7  1.0
+neighbor Db7  Gb7  1.0
+neighbor Gb7  B7   1.0
+
+# IV → I (bar 7)
+neighbor F7   C7   1.0
+neighbor C7   G7   1.0
+neighbor G7   D7   1.0
+neighbor D7   A7   1.0
+neighbor A7   E7   1.0
+neighbor E7   B7   1.0
+neighbor Bb7  F7   0.95
+neighbor Eb7  Bb7  0.95
+neighbor Ab7  Eb7  0.95
+
+# V → I (bar 9–10 → bar 11, stärkste Auflösung im Blues)
+neighbor G7   C7   1.0
+neighbor D7   G7   1.0
+neighbor A7   D7   1.0
+neighbor E7   A7   1.0
+neighbor B7   E7   1.0
+neighbor F7   Bb7  0.95
+neighbor C7   F7   0.95
+neighbor Bb7  Eb7  0.90
+
+# Tritonussubstitution (♭V7 → I) – charakteristisch für Blues/Jazz-Blues
+neighbor Db7  C7   0.90   # ♭II7 of C
+neighbor Ab7  G7   0.90   # ♭II7 of G
+neighbor Eb7  D7   0.85
+neighbor Gb7  F7   0.85
+neighbor Bb7  A7   0.85
+
+# Chromatische Nachbarn (Blues laufen gerne durch)
+neighbor C7   Db7  0.70
+neighbor Db7  D7   0.70
+neighbor D7   Eb7  0.70
+neighbor Eb7  E7   0.70
+neighbor F7   Gb7  0.70
+neighbor Gb7  G7   0.70
+neighbor G7   Ab7  0.70
+neighbor Ab7  A7   0.70
+neighbor A7   Bb7  0.70
+neighbor Bb7  B7   0.70
+neighbor B7   C7   0.70
+
+# Quick-Change Variation (bar 2 → IV)
+neighbor C7   F7   1.0
+neighbor G7   C7   1.0

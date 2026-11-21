@@ -1,0 +1,113 @@
+# Romantik – Chromatische Medianten & Terzverwandte
+# Prinzip: Akkorde sind eine große oder kleine Terz entfernt (statt Quinte)
+# Stilistik: Schubert, Wagner, Liszt, Hans Zimmer, John Williams
+# Kein Leitton-Zwang, überraschende Farbwechsel
+
+# ═══════════════════════════════════════════
+#  AKKORDE – GROßE TERZ-ZYKLUS (Aug. Dreiklang: C–E–Ab)
+# ═══════════════════════════════════════════
+
+chord Cmaj7   60 64 67 71
+chord Emaj7   64 68 71 75
+chord Abmaj7  68 72 75 79
+
+chord Gmaj7   67 71 74 78
+chord Bmaj7   71 75 78 82
+chord Ebmaj7  63 67 70 74
+
+chord Dmaj7   62 66 69 73
+chord F#maj7  66 70 73 77
+chord Bbmaj7  70 74 77 81
+
+# ═══════════════════════════════════════════
+#  AKKORDE – KLEINE TERZ (Moll-Medianten)
+# ═══════════════════════════════════════════
+
+chord Am7     69 72 76 79
+chord Cm7     60 63 67 70
+chord Ebm7    63 66 70 73
+chord F#m7    66 69 73 76
+
+chord Em7     64 67 71 74
+chord Gm7     67 70 74 77
+chord Bbm7    70 73 77 80
+chord C#m7    61 64 68 71
+
+# ═══════════════════════════════════════════
+#  AKKORDE – NEAPOLITANER & SONDERKLÄNGE
+# ═══════════════════════════════════════════
+
+chord Dbmaj7  61 65 68 72   # Neapolitaner von C (♭II)
+chord Abmaj7  68 72 75 79   # schon oben
+chord Fmaj7   65 69 72 76   # Subdominante
+
+# Augmentierte Akkorde (Liszt, Wagner)
+chord Caug    60 64 68      # C+ (symmetrisch)
+chord Eaug    64 68 72      # E+ (selber Klang wie C+)
+chord Abaug   68 72 76      # Ab+ (selber Klang)
+
+# ═══════════════════════════════════════════
+#  TERZ-VERWANDTE BEZIEHUNGEN
+# ═══════════════════════════════════════════
+
+# Große-Terz-Zyklus (Augmented-Terzkreis C–E–Ab–C)
+neighbor Cmaj7  Emaj7   1.0
+neighbor Emaj7  Abmaj7  1.0
+neighbor Abmaj7 Cmaj7   1.0
+neighbor Gmaj7  Bmaj7   1.0
+neighbor Bmaj7  Ebmaj7  1.0
+neighbor Ebmaj7 Gmaj7   1.0
+neighbor Dmaj7  F#maj7  1.0
+neighbor F#maj7 Bbmaj7  1.0
+neighbor Bbmaj7 Dmaj7   1.0
+
+# Chromatische Medianten (C → Dur/Moll Terz)
+neighbor Cmaj7  Ebmaj7  0.95  # ♭III chrom. Mediant (Film Score!)
+neighbor Cmaj7  Abmaj7  0.95  # ♭VI chrom. Mediant
+neighbor Cmaj7  Am7     0.90  # VI diatonisch
+neighbor Cmaj7  Em7     0.85  # III diatonisch
+neighbor Cmaj7  Emaj7   0.95  # ♯III chrom. Mediant
+neighbor Gmaj7  Ebmaj7  0.90
+neighbor Gmaj7  Bmaj7   0.95
+neighbor Dmaj7  F#maj7  0.95
+neighbor Dmaj7  Bbmaj7  0.90
+neighbor Emaj7  Cmaj7   0.90
+neighbor Abmaj7 Cmaj7   0.90
+neighbor Abmaj7 Em7     0.85
+neighbor Ebmaj7 Cmaj7   0.85
+neighbor Ebmaj7 Gm7     0.80
+neighbor F#maj7 Dmaj7   0.90
+neighbor Bbmaj7 Gmaj7   0.85
+
+# Neapolitaner-Beziehungen
+neighbor Dbmaj7 Cmaj7   0.95  # ♭II → I (Neapolitaner)
+neighbor Dbmaj7 Em7     0.80
+neighbor Dbmaj7 Abmaj7  0.85
+
+# Augmentierte Übergänge (schwebend, unentschieden)
+neighbor Caug   Cmaj7   0.85
+neighbor Caug   Emaj7   0.85
+neighbor Caug   Abmaj7  0.85
+neighbor Eaug   Emaj7   0.85
+neighbor Eaug   Gmaj7   0.80
+
+# Moll-Terz Verbindungen
+neighbor Am7    Cm7     0.85  # kleiner Terz-Schritt
+neighbor Cm7    Ebm7    0.80
+neighbor Em7    Gm7     0.85
+neighbor Gm7    Bbm7    0.80
+neighbor C#m7   Em7     0.85
+neighbor F#m7   Am7     0.85
+
+# Dur–Moll Schattierungen (selber Grundton)
+neighbor Cmaj7  Cm7     0.80   # C-Dur → C-Moll (Parallelismus)
+neighbor Emaj7  Em7     0.80
+neighbor Gmaj7  Gm7     0.80
+neighbor Abmaj7 Abmaj7  0.75   # (Farbtausch)
+neighbor Dmaj7  Dm7     0.75
+neighbor F#maj7 F#m7    0.75
+
+# Subdominante mit romantischer Färbung
+neighbor Fmaj7  Abmaj7  0.80   # IV → ♭VI
+neighbor Fmaj7  Dbmaj7  0.75   # IV → ♭II (weiche Kadenz)
+neighbor Cmaj7  Fmaj7   0.80

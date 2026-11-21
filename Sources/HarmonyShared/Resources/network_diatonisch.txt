@@ -1,0 +1,78 @@
+# Diatonisch – Stufenharmonik in C-Dur
+# Prinzip: Alle 7 Stufenakkorde, Funktionen Tonika / Subdominante / Dominante
+# Akkorde: Septakkorde der C-Dur-Tonleiter  I ii iii IV V vi vii°
+
+# ═══════════════════════════════════════════
+#  STUFENAKKORDE C-DUR (Septakkorde)
+# ═══════════════════════════════════════════
+
+chord Cmaj7   60 64 67 71   # I   Tonika
+chord Dm7     62 65 69 72   # ii  Subdominante-Parallel
+chord Em7     64 67 71 74   # iii Tonika-Parallel
+chord Fmaj7   65 69 72 76   # IV  Subdominante
+chord G7      67 71 74 77   # V   Dominante
+chord Am7     69 72 76 79   # vi  Tonika-Gegenklang
+chord Bm7b5   71 74 77 81   # vii° Leittondreiklang
+
+# Erweitert: Parallel-Tonarten für Ausweichungen
+chord Gmaj7   67 71 74 78   # I/G  (Ausweichung nach G-Dur)
+chord D7      62 66 69 72   # V/G  (Dominante von G)
+chord A7      69 73 76 79   # V/D  (Dominante von D)
+chord Fmaj7   65 69 72 76   # schon drin
+chord C7      60 64 67 70   # V/F  (Dominante von F)
+chord E7      64 68 71 74   # V/Am (Dominante von Am)
+chord Bbmaj7  70 74 77 81   # IV♭  (modal interchange)
+chord Ebmaj7  63 67 70 74   # ♭III (modal interchange)
+
+# ═══════════════════════════════════════════
+#  FUNKTIONALE BEZIEHUNGEN
+# ═══════════════════════════════════════════
+
+# Dominante → Tonika (stärkste Beziehung)
+neighbor G7     Cmaj7  1.0
+neighbor D7     Gmaj7  1.0
+neighbor A7     Dm7    0.95
+neighbor E7     Am7    0.95
+neighbor C7     Fmaj7  0.90
+
+# ii–V–I (Jazz-Standardkadenz)
+neighbor Dm7    G7     1.0
+neighbor G7     Cmaj7  1.0
+neighbor Am7    D7     0.95
+neighbor D7     Gmaj7  0.95
+
+# Subdominante → Dominante
+neighbor Fmaj7  G7     0.90
+neighbor Fmaj7  Dm7    0.85
+neighbor Dm7    G7     1.0
+
+# Tonika-Bewegungen
+neighbor Cmaj7  Am7    0.95   # I → vi
+neighbor Cmaj7  Em7    0.85   # I → iii
+neighbor Cmaj7  Fmaj7  0.90   # I → IV
+neighbor Cmaj7  G7     0.80   # I → V
+neighbor Am7    Fmaj7  0.85   # vi → IV
+neighbor Am7    G7     0.80   # vi → V (Cadenz)
+neighbor Em7    Am7    0.80   # iii → vi
+neighbor Em7    Cmaj7  0.75   # iii → I
+
+# Subdominante-Familie
+neighbor Fmaj7  Cmaj7  0.85   # IV → I (Plagalkadenz)
+neighbor Dm7    Fmaj7  0.75   # ii → IV
+
+# Leittondreiklang
+neighbor Bm7b5  E7     0.90   # vii° → V/Am
+neighbor Bm7b5  Em7    0.80
+neighbor Bm7b5  G7     0.75
+
+# Modal Interchange (Anleihen aus C-Moll)
+neighbor Cmaj7  Bbmaj7 0.75
+neighbor Cmaj7  Ebmaj7 0.70
+neighbor Fmaj7  Bbmaj7 0.80
+neighbor Bbmaj7 Cmaj7  0.70
+neighbor Ebmaj7 Cmaj7  0.65
+
+# Gmaj7-Feld
+neighbor Gmaj7  Em7    0.80
+neighbor Gmaj7  Am7    0.75
+neighbor Gmaj7  Cmaj7  0.85

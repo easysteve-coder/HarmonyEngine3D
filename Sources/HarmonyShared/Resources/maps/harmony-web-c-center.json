@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "harmony-web-c-center",
+  "name": "Harmony Web – C-Zentrum (Testwelt v1)",
+  "layers": [
+    {
+      "id": "functional",
+      "name": "Functional (C-Dur)",
+      "relationTypes": ["V-I", "ii-V", "tritSubst", "commonTone"]
+    },
+    {
+      "id": "modal",
+      "name": "Modal (Relativ / Paralleltonarten)",
+      "relationTypes": ["relMajMin", "commonTone"]
+    }
+  ],
+  "nodes": [
+    { "id": "Cmaj7",  "root": 60, "type": "maj7",  "function": "tonic",       "midiNotes": [60, 64, 67, 71] },
+    { "id": "Dm7",    "root": 62, "type": "m7",    "function": "subdominant", "midiNotes": [62, 65, 69, 72] },
+    { "id": "Em7",    "root": 64, "type": "m7",    "function": "tonic",       "midiNotes": [64, 67, 71, 74] },
+    { "id": "Fmaj7",  "root": 65, "type": "maj7",  "function": "subdominant", "midiNotes": [65, 69, 72, 76] },
+    { "id": "G7",     "root": 67, "type": "dom7",  "function": "dominant",    "midiNotes": [67, 71, 74, 77] },
+    { "id": "Am7",    "root": 69, "type": "m7",    "function": "tonic",       "midiNotes": [69, 72, 76, 79] },
+    { "id": "Bm7b5",  "root": 71, "type": "m7b5",  "function": "dominant",    "midiNotes": [71, 74, 77, 81] },
+    { "id": "Db7",    "root": 61, "type": "dom7",  "function": "dominant",    "midiNotes": [61, 65, 68, 71] }
+  ],
+  "edges": [
+    { "id": "Dm7-G7",            "source": "Dm7",   "target": "G7",    "relationTypes": ["ii-V"],       "directed": true,  "layers": ["functional"], "weight": 0.95, "magnetProfile": { "preset": "strong" } },
+    { "id": "G7-Cmaj7",          "source": "G7",    "target": "Cmaj7", "relationTypes": ["V-I"],        "directed": true,  "layers": ["functional"], "weight": 1.00, "magnetProfile": { "preset": "strong" } },
+    { "id": "Db7-Cmaj7",         "source": "Db7",   "target": "Cmaj7", "relationTypes": ["tritSubst"],  "directed": true,  "layers": ["functional"], "weight": 0.90, "magnetProfile": { "preset": "medium" } },
+    { "id": "Db7-G7",            "source": "Db7",   "target": "G7",    "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.45, "magnetProfile": { "preset": "weak"   } },
+    { "id": "G7-Am7",            "source": "G7",    "target": "Am7",   "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.45, "magnetProfile": { "preset": "weak"   } },
+    { "id": "Fmaj7-G7",          "source": "Fmaj7", "target": "G7",    "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.80, "magnetProfile": { "preset": "medium" } },
+    { "id": "Fmaj7-Dm7",         "source": "Fmaj7", "target": "Dm7",   "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.65, "magnetProfile": { "preset": "medium" } },
+    { "id": "Am7-Dm7",           "source": "Am7",   "target": "Dm7",   "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.75, "magnetProfile": { "preset": "medium" } },
+    { "id": "Am7-Bm7b5",         "source": "Am7",   "target": "Bm7b5", "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.50, "magnetProfile": { "preset": "weak"   } },
+    { "id": "Bm7b5-G7",          "source": "Bm7b5", "target": "G7",    "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.70, "magnetProfile": { "preset": "medium" } },
+    { "id": "Bm7b5-Cmaj7",       "source": "Bm7b5", "target": "Cmaj7", "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.55, "magnetProfile": { "preset": "weak"   } },
+    { "id": "Cmaj7-Fmaj7",       "source": "Cmaj7", "target": "Fmaj7", "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.70, "magnetProfile": { "preset": "medium" } },
+    { "id": "Cmaj7-Dm7",         "source": "Cmaj7", "target": "Dm7",   "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.70, "magnetProfile": { "preset": "medium" } },
+    { "id": "Cmaj7-G7",          "source": "Cmaj7", "target": "G7",    "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.80, "magnetProfile": { "preset": "medium" } },
+    { "id": "Em7-Am7",           "source": "Em7",   "target": "Am7",   "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.70, "magnetProfile": { "preset": "medium" } },
+    { "id": "Em7-Cmaj7",         "source": "Em7",   "target": "Cmaj7", "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.65, "magnetProfile": { "preset": "medium" } },
+    { "id": "Dm7-Cmaj7",         "source": "Dm7",   "target": "Cmaj7", "relationTypes": ["commonTone"], "directed": true,  "layers": ["functional"], "weight": 0.60, "magnetProfile": { "preset": "medium" } },
+    { "id": "Cmaj7-Am7-modal",   "source": "Cmaj7", "target": "Am7",   "relationTypes": ["relMajMin"],  "directed": false, "layers": ["modal"],      "weight": 0.85, "magnetProfile": { "preset": "medium" } },
+    { "id": "Fmaj7-Dm7-modal",   "source": "Fmaj7", "target": "Dm7",   "relationTypes": ["relMajMin"],  "directed": false, "layers": ["modal"],      "weight": 0.80, "magnetProfile": { "preset": "medium" } },
+    { "id": "Em7-Cmaj7-modal",   "source": "Em7",   "target": "Cmaj7", "relationTypes": ["commonTone"], "directed": false, "layers": ["modal"],      "weight": 0.65, "magnetProfile": { "preset": "weak"   } },
+    { "id": "Am7-Em7-modal",     "source": "Am7",   "target": "Em7",   "relationTypes": ["commonTone"], "directed": false, "layers": ["modal"],      "weight": 0.60, "magnetProfile": { "preset": "weak"   } },
+    { "id": "Cmaj7-Fmaj7-modal", "source": "Cmaj7", "target": "Fmaj7", "relationTypes": ["commonTone"], "directed": false, "layers": ["modal"],      "weight": 0.70, "magnetProfile": { "preset": "weak"   } }
+  ],
+  "layout": {
+    "strategy": "tonnetz"
+  }
+}

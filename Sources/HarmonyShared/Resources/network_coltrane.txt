@@ -1,0 +1,73 @@
+# Coltrane Changes – Giant Steps / Countdown
+# Prinzip: Drei tonale Zentren im Großterzabstand (Terzenpendel)
+#   B  –  G  –  Eb  (jeweils 4 Halbtöne auseinander = gleichmäßige Dreiteilung der Oktave)
+# Zwischen den Zentren: Dominanten eine Quinte darüber
+# Stilistik: Coltrane 1960 ("Giant Steps", "Countdown", "Satellite")
+# Lehrwert: zeigt wie Subdominante und Tonika durch Terzen ersetzt werden können
+
+# ═══════════════════════════════════════════
+#  DREI TONALE ZENTREN
+# ═══════════════════════════════════════════
+
+chord Bmaj7    71 75 78 81    # I   in B-Dur  (Hauptzentrum)
+chord Gmaj7    67 71 74 78    # I   in G-Dur  (zweites Zentrum, große Terz tiefer)
+chord Ebmaj7   63 67 70 74    # I   in Eb-Dur (drittes Zentrum, weitere große Terz tiefer)
+
+# ═══════════════════════════════════════════
+#  DOMINANTEN (V7 → jeweiliges Zentrum)
+# ═══════════════════════════════════════════
+
+chord F#7      66 70 73 76    # V7  → Bmaj7  (F# ist Quinte unter B)
+chord D7       62 66 69 72    # V7  → Gmaj7  (D ist Quinte unter G)
+chord Bb7      70 74 77 80    # V7  → Ebmaj7 (Bb ist Quinte unter Eb)
+
+# ═══════════════════════════════════════════
+#  ii-AKKORDE (für ii–V–I in jedem Zentrum)
+# ═══════════════════════════════════════════
+
+chord C#m7     61 64 68 71    # ii  in B  (C#–E–G#–B)
+chord Am7      69 72 76 79    # ii  in G  (A–C–E–G)
+chord Fm7      65 68 72 75    # ii  in Eb (F–Ab–C–Eb)
+
+# ═══════════════════════════════════════════
+#  COLTRANE-ZYKLUS (das Terzenpendel, geschlossen)
+# ═══════════════════════════════════════════
+
+# Der Kern: Bmaj7 → [V7/G] → Gmaj7 → [V7/Eb] → Ebmaj7 → [V7/B] → Bmaj7
+neighbor Bmaj7    D7       1.0    # I/B  → V7/G   (Giant Steps, Takt 1–2)
+neighbor D7       Gmaj7    1.0    # V7   → I/G    (Auflösung)
+neighbor Gmaj7    Bb7      1.0    # I/G  → V7/Eb  (nächste Terz)
+neighbor Bb7      Ebmaj7   1.0    # V7   → I/Eb   (Auflösung)
+neighbor Ebmaj7   F#7      1.0    # I/Eb → V7/B   (zurück zur Terz)
+neighbor F#7      Bmaj7    1.0    # V7   → I/B    (Zyklus geschlossen)
+
+# ═══════════════════════════════════════════
+#  ii–V–I IN JEDEM ZENTRUM (Moment's Notice / Countdown)
+# ═══════════════════════════════════════════
+
+neighbor C#m7     F#7      0.95   # ii–V  in B
+neighbor F#7      Bmaj7    1.0    # V–I   in B  (schon oben)
+neighbor Am7      D7       0.95   # ii–V  in G
+neighbor D7       Gmaj7    1.0    # V–I   in G  (schon oben)
+neighbor Fm7      Bb7      0.95   # ii–V  in Eb
+neighbor Bb7      Ebmaj7   1.0    # V–I   in Eb (schon oben)
+
+# ═══════════════════════════════════════════
+#  DIREKTVERBINDUNGEN ZWISCHEN ZENTREN (Terzensprünge)
+# ═══════════════════════════════════════════
+
+neighbor Bmaj7    Gmaj7    0.80   # direkt B → G   (Terzsprung, ohne Dominante)
+neighbor Gmaj7    Ebmaj7   0.80   # direkt G → Eb
+neighbor Ebmaj7   Bmaj7    0.80   # direkt Eb → B  (Kreis geschlossen)
+
+# ═══════════════════════════════════════════
+#  COUNTDOWN-STYLE (ii–V Substitution auf jedem Halbton-Schritt)
+# ═══════════════════════════════════════════
+
+neighbor C#m7     D7       0.70   # Countdown: ii von B → V von G (Chromatic ii-V)
+neighbor Am7      Bb7      0.70   # ii von G  → V von Eb
+neighbor Fm7      F#7      0.70   # ii von Eb → V von B (Halbtonschritt)
+
+# Coltrane liebt auch "inside-outside": zurück zum Ausgangspunkt
+neighbor Gmaj7    Bmaj7    0.65
+neighbor Ebmaj7   Gmaj7    0.65

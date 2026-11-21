@@ -1,0 +1,44 @@
+# Status Quo – Drei Akkorde. Das reicht. 🤘
+# "Whatever You Want" · "Rockin' All Over The World" · "Caroline"
+# Grundprinzip: I–IV–V in A (und ein paar Verwandte)
+# Mehr braucht kein Mensch.
+
+# ═══════════════════════════════════════════
+#  DIE DREI AKKORDE
+# ═══════════════════════════════════════════
+
+chord A       69 73 76        # I   ← Heimat
+chord D       62 66 69        # IV  ← Subdominante
+chord E       64 68 71        # V   ← Dominante. Fertig.
+
+# ═══════════════════════════════════════════
+#  BONUS: Auch Quo variiert manchmal (leise)
+# ═══════════════════════════════════════════
+
+chord G       67 71 74        # ♭VII (Rock-typisch, borrowing)
+chord Bm      71 74 78        # vi  (für die balladenhaften Momente)
+
+# ═══════════════════════════════════════════
+#  VERBINDUNGEN (es sind wenige, das passt)
+# ═══════════════════════════════════════════
+
+# Das Herz von Quo: I–IV–V–I
+neighbor A     D     1.0
+neighbor D     E     1.0
+neighbor E     A     1.0
+
+# Rückwege
+neighbor D     A     0.95
+neighbor A     E     0.90
+neighbor E     D     0.80
+
+# Mit dem ♭VII (Rock-Wechsel)
+neighbor A     G     0.75
+neighbor G     D     0.85
+neighbor G     A     0.80
+neighbor D     G     0.70
+
+# Die Ballade (selten)
+neighbor A     Bm    0.65
+neighbor Bm    E     0.75
+neighbor Bm    D     0.70

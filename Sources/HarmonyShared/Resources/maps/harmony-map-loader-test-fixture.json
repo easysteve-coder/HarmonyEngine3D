@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "id": "harmony-map-loader-test-fixture",
+  "name": "HarmonyMapLoader Test Fixture (Runde 017 / F-03)",
+  "layers": [
+    { "id": "functional", "name": "Functional", "relationTypes": ["V-I"] }
+  ],
+  "nodes": [
+    { "id": "Cmaj7", "root": 60, "type": "maj7", "function": "tonic",    "midiNotes": [60, 64, 67, 71] },
+    { "id": "G7",    "root": 67, "type": "dom7", "function": "dominant", "midiNotes": [67, 71, 74, 77] }
+  ],
+  "edges": [
+    { "id": "G7-Cmaj7", "source": "G7", "target": "Cmaj7", "relationTypes": ["V-I"], "directed": true, "layers": ["functional"], "weight": 1.0 }
+  ],
+  "layout": { "strategy": "manual" }
+}

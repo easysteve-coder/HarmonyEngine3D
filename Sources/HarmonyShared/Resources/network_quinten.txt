@@ -1,0 +1,126 @@
+# Quintenzirkel – Rock & Pop Harmonik
+# Prinzip: Dominante (V) und Subdominante (IV) als stärkste Nachbarn
+# Dur-Dreiklänge + Moll-Dreiklänge aller 12 Töne
+# Format: chord <name> <midi1> <midi2> <midi3>
+
+# ═══════════════════════════════════════════
+#  DUR-DREIKLÄNGE
+# ═══════════════════════════════════════════
+
+chord C     60 64 67
+chord G     67 71 74
+chord D     62 66 69
+chord A     69 73 76
+chord E     64 68 71
+chord B     71 75 78
+chord Gb    66 70 73
+chord Db    61 65 68
+chord Ab    68 72 75
+chord Eb    63 67 70
+chord Bb    70 74 77
+chord F     65 69 72
+
+# ═══════════════════════════════════════════
+#  MOLL-DREIKLÄNGE
+# ═══════════════════════════════════════════
+
+chord Am    69 72 76
+chord Em    64 67 71
+chord Bm    71 74 78
+chord F#m   66 69 73
+chord C#m   61 64 68
+chord G#m   68 71 75
+chord Ebm   63 66 70
+chord Bbm   70 73 77
+chord Fm    65 68 72
+chord Cm    60 63 67
+chord Gm    67 70 74
+chord Dm    62 65 69
+
+# ═══════════════════════════════════════════
+#  QUINTENZIRKEL-BEZIEHUNGEN (stark = enger Abstand)
+# ═══════════════════════════════════════════
+
+# Quintenzirkel-Schritte (Dur)
+neighbor C   G   1.0
+neighbor G   D   1.0
+neighbor D   A   1.0
+neighbor A   E   1.0
+neighbor E   B   1.0
+neighbor B   Gb  1.0
+neighbor Gb  Db  1.0
+neighbor Db  Ab  1.0
+neighbor Ab  Eb  1.0
+neighbor Eb  Bb  1.0
+neighbor Bb  F   1.0
+neighbor F   C   1.0
+
+# Subdominante (IV)
+neighbor C   F   0.95
+neighbor G   C   0.95
+neighbor D   G   0.95
+neighbor A   D   0.95
+neighbor E   A   0.95
+neighbor Bb  Eb  0.90
+neighbor Eb  Ab  0.90
+neighbor Ab  Db  0.90
+
+# Dur → relative Moll (VI) — alle 12 Dur-Tonarten
+neighbor C   Am   0.95
+neighbor G   Em   0.95
+neighbor D   Bm   0.95
+neighbor A   F#m  0.95
+neighbor E   C#m  0.90
+neighbor B   G#m  0.90
+neighbor Gb  Ebm  0.88
+neighbor Db  Bbm  0.88
+neighbor Ab  Fm   0.88
+neighbor F   Dm   0.90
+neighbor Bb  Gm   0.90
+neighbor Eb  Cm   0.90
+
+# Moll → relative Dur — alle 12 Moll-Tonarten
+neighbor Am  C    0.90
+neighbor Em  G    0.90
+neighbor Bm  D    0.90
+neighbor F#m A    0.90
+neighbor C#m E    0.90
+neighbor G#m B    0.88
+neighbor Ebm Gb   0.88
+neighbor Bbm Db   0.88
+neighbor Fm  Ab   0.88
+neighbor Dm  F    0.90
+neighbor Gm  Bb   0.90
+neighbor Cm  Eb   0.90
+
+# Moll Quintenzirkel (vollständig)
+neighbor Am  Em   0.85
+neighbor Em  Bm   0.85
+neighbor Bm  F#m  0.85
+neighbor F#m C#m  0.85
+neighbor C#m G#m  0.85
+neighbor G#m Ebm  0.85
+neighbor Ebm Bbm  0.85
+neighbor Bbm Fm   0.85
+neighbor Fm  Cm   0.85
+neighbor Cm  Gm   0.85
+neighbor Gm  Dm   0.85
+neighbor Dm  Am   0.85
+
+# I–IV–V Rock-Grundgerüst (alle 12 Keys)
+neighbor C   F   0.95
+neighbor C   G   1.00
+neighbor G   C   0.95
+neighbor G   D   1.00
+neighbor D   G   0.95
+neighbor D   A   1.00
+neighbor A   D   0.95
+neighbor A   E   1.00
+neighbor E   A   0.95
+neighbor E   B   1.00
+neighbor F   Bb  0.90
+neighbor F   C   0.95
+neighbor Bb  Eb  0.90
+neighbor Bb  F   0.95
+neighbor Eb  Ab  0.85
+neighbor Eb  Bb  0.90

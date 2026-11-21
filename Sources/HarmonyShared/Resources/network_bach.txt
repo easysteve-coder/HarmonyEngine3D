@@ -1,0 +1,102 @@
+# Bach / Barock – Funktionsharmonik in d-Moll
+# Tonzentrum: d-Moll (Bachs Lieblingstonart: Chaconne, Toccata, Passacaglia)
+# Charakteristisch:
+#   – Dur-Dominante in Moll (A7 statt Am): erzeugt starken Leitton cis
+#   – Quintfall-Sequenzen: A7–Dm / E7–Am / B7–Em (Bachs "Sequenz-Motor")
+#   – Picardische Terz: D-Dur am Ende eines Moll-Stücks (mittelalterlich→barock)
+#   – Neapolitanischer Akkord: bII = Eb (ein Halbton über der Dominante)
+#   – Trugschluss: V7 → VI statt V7 → i
+
+# ═══════════════════════════════════════════
+#  d-MOLL DIATONISCH
+# ═══════════════════════════════════════════
+
+chord Dm       62 65 69        # i    Tonika (Moll)
+chord Em7b5    64 67 70 74     # ii°  Halbverminderter (Leitton zur Dominante)
+chord Fmaj7    65 69 72 76     # III  Dur-Mediante (Relative Durtonart)
+chord Gm       67 70 74        # iv   Subdominante Moll
+chord A7       69 73 76 79     # V7   Dur-Dominante ← der entscheidende Bach-Trick!
+chord Bb       70 74 77        # VI   Dur auf 6. Stufe (Trugschluss-Ziel)
+chord C7       60 64 67 70     # VII  Subtonikadominante
+
+# Picardische Terz (Dur-Schlussakkord in Moll-Stück)
+chord D        62 66 69        # I    d-Dur (Picardy Third)
+
+# ═══════════════════════════════════════════
+#  C-DUR (Relative Durtonart, wichtig für Bach-Harmonik)
+# ═══════════════════════════════════════════
+
+chord Cmaj7    60 64 67 71     # I   in C-Dur
+chord G7       67 71 74 77     # V7  in C-Dur
+chord Am7      69 72 76 79     # vi  in C-Dur (= i-Parallel in a-Moll)
+chord Bdim7    71 74 77 80     # vii°7 in C-Dur / a-Moll
+
+# ═══════════════════════════════════════════
+#  SEKUNDÄRDOMINANTEN (Quintfall-Kette)
+# ═══════════════════════════════════════════
+
+chord E7       64 68 71 75     # V7/Am  → Am7 (Quintfall-Stufe)
+chord B7       71 75 78 81     # V7/Em  → Em (selten, aber Bach macht's)
+chord F#dim7   66 69 72 75     # vii°7  → Gm (verminderter Leitton)
+
+# ═══════════════════════════════════════════
+#  NEAPOLITANISCHER AKKORD (♭II)
+# ═══════════════════════════════════════════
+
+chord Ebmaj    63 67 70        # ♭II  Neapolitaner (Eb-Dur in d-Moll-Kontext)
+#  Verwendung: Ebmaj → A7 → Dm  (sehr dramatisch, Halbtonreibung)
+
+# ═══════════════════════════════════════════
+#  VERBINDUNGEN – BACH-KADENZFORMELN
+# ═══════════════════════════════════════════
+
+# Hauptkadenz: V7 → i  (stärkste Bewegung in Moll)
+neighbor A7      Dm       1.0    # Dominante → Tonika (Leitton cis → d)
+neighbor A7      D        0.80   # Dominante → Picardische Terz (Schlussformel)
+
+# Trugschluss (deceptive cadence): V7 → VI  statt V7 → i
+neighbor A7      Bb       0.75   # Bach liebt den Trugschluss!
+
+# Subdominante → Dominante
+neighbor Gm      A7       0.90   # iv → V7   (Kadenz mit Moll-Subdominante)
+neighbor Em7b5   A7       0.90   # ii° → V7  (halbvermindert treibt zur Dominante)
+neighbor Fmaj7   A7       0.80   # III → V7  (Dur-Mediante → Dominante)
+
+# Tonikabewegungen
+neighbor Dm      Gm       0.80   # i → iv   (Tonika zur Subdominante)
+neighbor Dm      Bb       0.70   # i → VI   (zur Durparallele)
+neighbor Dm      Fmaj7    0.70   # i → III  (Relative)
+neighbor Dm      A7       0.65   # i → V7   (direkt zur Dominante)
+
+# Quintfall-Sequenz (das Herzstück Bach'scher Harmonik)
+# Jeder Akkord ist V7 des nächsten: E7→Am7→D7→Gm→C7→Fmaj7
+neighbor E7      Am7      0.90   # V7/Am → Am  (Quintfall-Stufe 1)
+neighbor Am7     D        0.85   # → d (als Durchgangsakkord)
+neighbor Am7     Dm       0.80   # Am → Dm (Parallelklang)
+neighbor C7      Fmaj7    0.85   # V7/F → Fmaj7
+neighbor G7      Cmaj7    0.90   # V7 → I in C (in die Dur-Relative)
+neighbor B7      Em7b5    0.75   # B7 → Em/e°  (seltener Bach-Schritt)
+
+# Chromatische Aufstiegslinien (Bachs "Bassostinato"-Logik)
+neighbor Bb      A7       0.85   # VI → V7   (Halbton-Abstieg im Bass)
+neighbor C7      Bb       0.75   # VII → VI  (Stufenfolge abwärts)
+neighbor Fmaj7   Em7b5    0.70   # III → ii°
+
+# Relative Dur/Moll-Übergänge
+neighbor Dm      Cmaj7    0.70   # d-Moll → C-Dur (Tonartwechsel)
+neighbor Cmaj7   Am7      0.80   # C → a-Moll (vi)
+neighbor Am7     Dm       0.75   # a-Moll → d-Moll (Quintfall)
+neighbor Cmaj7   G7       0.85   # I → V in C
+
+# Neapolitaner → Dominante (dramatischste Bachsche Wendung)
+neighbor Ebmaj   A7       0.90   # bII → V7  (Halbtonreibung, sehr expressiv)
+neighbor Ebmaj   Dm       0.70   # bII → i   (selten direkt)
+
+# Leittonakkord
+neighbor Bdim7   Cmaj7    0.90   # vii°7 → I in C
+neighbor Bdim7   A7       0.80   # vii°7 → V7 (über Dominante)
+neighbor F#dim7  Gm       0.80   # vii°7 von g → Gm
+
+# Picardische Terz Übergänge (Bach beendet Moll-Stücke oft in Dur)
+neighbor Gm      D        0.75   # iv → I(picard.)  – klassische Schlussformel
+neighbor Em7b5   D        0.65   # ii° → I(picard.)

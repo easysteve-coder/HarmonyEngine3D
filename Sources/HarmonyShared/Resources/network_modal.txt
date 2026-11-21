@@ -1,0 +1,102 @@
+# Modal – Modale Harmonie
+# Prinzip: Akkorde bleiben in einem Modus, keine dominantische Auflösung
+# Hauptmodus: D-Dorisch · weitere: A-Mixolydisch, F-Lydisch, E-Phrygisch
+
+# ═══════════════════════════════════════════
+#  D-DORISCH  (D E F G A B C)
+# ═══════════════════════════════════════════
+
+chord Dm7     62 65 69 72   # i    Tonica des Dorischen
+chord Em7b5   64 67 70 74   # ii°  (mi7b5 in dorisch selten)
+chord Fmaj7   65 69 72 76   # III
+chord G7      67 71 74 77   # IV7  ← charakteristisch für Dorisch (kein Leitton)
+chord Am7     69 72 76 79   # v
+chord Bm7b5   71 74 77 81   # vi°
+chord Cmaj7   60 64 67 71   # VII  ← großes VII ist dorisches Merkmal
+
+# ═══════════════════════════════════════════
+#  A-MIXOLYDISCH  (A B C# D E F# G)
+# ═══════════════════════════════════════════
+
+chord A7      69 73 76 79   # I7  ← flache Septime, kein Leitton
+chord Bm7     71 74 78 81   # ii
+chord C#m7b5  61 64 67 71   # iii°
+chord Dmaj7   62 66 69 73   # IV
+chord Em7     64 67 71 74   # v
+chord F#m7    66 69 73 76   # vi
+chord Gmaj7   67 71 74 78   # VII  ← großes VII ist Merkmal des Mixolydischen
+
+# ═══════════════════════════════════════════
+#  F-LYDISCH  (F G A B C D E)
+# ═══════════════════════════════════════════
+
+chord Fmaj7   65 69 72 76   # I    (schon oben)
+chord G7      67 71 74 77   # II7  ← Lydische Dominante (♯IV-Klang)
+chord Am7     69 72 76 79   # iii
+chord Bm7b5   71 74 77 81   # ♯iv°  ← charakteristischer Lydisch-Akkord
+chord Cmaj7   60 64 67 71   # V
+chord Dm7     62 65 69 72   # vi
+chord Em7     64 67 71 74   # vii
+
+# ═══════════════════════════════════════════
+#  E-PHRYGISCH  (E F G A B C D)
+# ═══════════════════════════════════════════
+
+chord Em      64 67 71      # i    (Dreiklang, phrygisch braucht keine Septime)
+chord Fmaj    65 69 72      # ♭II  ← charakteristischster Phrygisch-Akkord
+chord Gm7     67 70 74 77   # ♭III
+chord Am7     69 72 76 79   # iv
+chord Bdim    71 74 77      # v°
+chord Cmaj    60 64 67      # ♭VI
+chord Dm7     62 65 69 72   # ♭VII
+
+# ═══════════════════════════════════════════
+#  MODALE BEZIEHUNGEN
+# ═══════════════════════════════════════════
+
+# D-Dorisch: statische Wechsel, kein dominantischer Zug
+neighbor Dm7    G7      1.0   # i → IV7 (der klassische Dorisch-Wechsel)
+neighbor G7     Dm7     1.0
+neighbor Dm7    Cmaj7   0.95  # i → VII
+neighbor Cmaj7  Dm7     0.95
+neighbor Dm7    Fmaj7   0.85  # i → III
+neighbor Fmaj7  Dm7     0.85
+neighbor Am7    Dm7     0.85  # v → i (modal, kein Leitton)
+neighbor Dm7    Am7     0.80
+neighbor Cmaj7  Fmaj7   0.80
+neighbor Fmaj7  G7      0.75
+neighbor Bm7b5  Cmaj7   0.70
+
+# A-Mixolydisch: I7 als Zentrum
+neighbor A7     Gmaj7   1.0   # I7 → VII (Mixolydisch-Wechsel)
+neighbor Gmaj7  A7      1.0
+neighbor A7     Dmaj7   0.90  # I7 → IV
+neighbor Dmaj7  A7      0.85
+neighbor A7     Em7     0.80
+neighbor Em7    A7      0.80
+neighbor Gmaj7  Dmaj7   0.85
+neighbor Dmaj7  Em7     0.75
+
+# F-Lydisch: Traumhafte schwebende Bewegungen
+neighbor Fmaj7  G7      1.0   # I → II7 (Lydische Supertonika)
+neighbor G7     Fmaj7   0.90
+neighbor Fmaj7  Em7     0.85
+neighbor Em7    Fmaj7   0.80
+neighbor G7     Am7     0.80
+neighbor Am7    Bm7b5   0.70
+neighbor Cmaj7  Fmaj7   0.85
+
+# E-Phrygisch: Dunkel, ♭II als charakteristischer Klang
+neighbor Em     Fmaj    1.0   # i → ♭II (der Phrygische Klang)
+neighbor Fmaj   Em      1.0
+neighbor Em     Dm7     0.85  # i → ♭VII
+neighbor Dm7    Em      0.80
+neighbor Em     Cmaj    0.80  # i → ♭VI
+neighbor Cmaj   Dm7     0.85
+neighbor Fmaj   Gm7     0.75
+neighbor Gm7    Am7     0.70
+
+# Modi-Verbindungen (selber Grundton, anderer Modus)
+neighbor Dm7    Em      0.65   # D-Dorisch → E-Phrygisch (gemeinsame Töne)
+neighbor A7     Am7     0.70   # A-Mixo → A-Moll (Moduswechsel auf A)
+neighbor Fmaj7  Fmaj    0.75   # F-Lydisch → F-Ionisch

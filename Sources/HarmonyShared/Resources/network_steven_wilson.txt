@@ -1,0 +1,131 @@
+# Steven Wilson / Porcupine Tree
+# Harmonische Sprache: PT-Klassiker + Wilson-Solo (ohne Harmony Codex → eigenes Netz)
+#
+# Kernmerkmale:
+#   – mMaj7: Wilsons Markenzeichen  (Dm△7 = dunkel + leuchtend zugleich)
+#   – I–V–vi–IV in D: DNA von "Trains", "The Sound of Muzak", "Shallow"
+#   – Dorian (Dm → G7): "Arriving Somewhere", "The Raven That Refused to Sing"
+#   – Chromatische Medianten: Fmaj7, Bbmaj7, Abmaj7 (Prog-Flavor, PT-typisch)
+#   – Dur-Aufhellungen aus tiefem Moll: dramatischer Wechsel, sehr PT
+#   – Sus-Akkorde die schweben: "Drive Home", "Routine"
+#   – F#m-Zentrum: "Heartattack in a Layby", "Even Less"
+#
+# Referenz-Songs:
+#   PT:    "Trains" · "Arriving Somewhere" · "Heartattack in a Layby"
+#          "The Sound of Muzak" · "Shallow" · "Anesthetize" · "Even Less"
+#   Solo:  "The Raven That Refused to Sing" · "Drive Home" · "Routine"
+#          "Pariah" · "Song of Unborn" · "Hand.Cannot.Erase"
+
+# ═══════════════════════════════════════════
+#  KERN: mMaj7-Welt (D-Zentrum)
+# ═══════════════════════════════════════════
+
+chord DmMaj7   62 65 69 73    # Dm△7  D–F–A–C#   ← Wilson-Signaturakkord
+chord Dm7      62 65 69 72    # Dm7   Dorian Tonika
+chord Dm       62 65 69       # Dm    pure minor
+chord Dmaj7    62 66 69 73    # Dmaj7 Dur-Aufhellung (elektrisierend nach Moll)
+chord Dadd9    62 66 69 76    # Dadd9 Gitarren-Intro-Vibe (D–F#–A–E)
+
+# ═══════════════════════════════════════════
+#  I–V–vi–IV IN D  ("Trains"-DNA)
+# ═══════════════════════════════════════════
+
+chord A        69 73 76       # V    A-Dur   (Stufe 5 über D)
+chord Bm       71 74 78       # vi   H-Moll  (Stufe 6, häufigste PT-Wendung)
+chord G        67 71 74       # IV   G-Dur   (Stufe 4, PT-Schlussgefühl)
+chord Gmaj7    67 71 74 78    # IVmaj7  Lydisch-Flavor, "Drive Home"
+
+# ═══════════════════════════════════════════
+#  DORIAN / MODAL  ("Arriving Somewhere", "The Raven")
+# ═══════════════════════════════════════════
+
+chord G7       67 71 74 77    # IV7   Dorian-Signatur: Dur-Quarte über Moll-Tonika
+chord Am7      69 72 76 79    # v7    Moll-Dominante (kein Leitton = modal)
+chord Fmaj7    65 69 72 76    # ♭III  kleine Terz über D (sehr PT-typisch)
+chord Bbmaj7   70 74 77 81    # ♭VI   Subdominante Major, warm + fremd
+
+# ═══════════════════════════════════════════
+#  F#m-ZENTRUM  ("Heartattack in a Layby", "Even Less")
+# ═══════════════════════════════════════════
+
+chord F#m      66 69 73       # F#m   i   Moll-Tonika
+chord F#mMaj7  66 69 73 77    # F#m△7 Wilson-Signatur in anderer Tonart
+chord Emaj7    64 68 71 75    # VII   großer Septakkord, PT-typisch
+chord C#m      61 64 68       # v     Moll-Dominante über F#
+
+# ═══════════════════════════════════════════
+#  SUS / OFFEN  ("Drive Home", "Routine")
+# ═══════════════════════════════════════════
+
+chord Dsus2    62 64 69       # Dsus2 D–E–A  (schwebend, klassisches Wilson-Gitarren-Intro)
+chord Asus4    69 74 76       # Asus4 A–D–E  (löst sich nicht auf, bleibt schweben)
+chord Gsus2    67 69 74       # Gsus2 G–A–D  (offen, luftig)
+
+# ═══════════════════════════════════════════
+#  CHROMATISCHE MEDIANTEN  (Prog-Terzketten)
+# ═══════════════════════════════════════════
+
+chord Abmaj7   68 72 75 79    # ♭V    fremdeste Mediante über D
+chord Cmaj7    60 64 67 71    # ♭VII  "Pariah"-Gefühl (Cm-Welt)
+chord Cm       60 63 67       # ♭VII  Moll (düsterer)
+
+# ═══════════════════════════════════════════
+#  VERBINDUNGEN
+# ═══════════════════════════════════════════
+
+# ── mMaj7-Kern ──────────────────────────────────────────────────────────
+neighbor DmMaj7   Dm7      0.85   # △7 → m7   (Entspannung, Halbton tiefer)
+neighbor DmMaj7   Fmaj7    0.90   # △7 → ♭III (charakteristischste Wilson-Bewegung)
+neighbor DmMaj7   Bbmaj7   0.85   # △7 → ♭VI  (tief, warm)
+neighbor DmMaj7   Dmaj7    0.80   # △7 → Dur  (dramatische Aufhellung)
+neighbor DmMaj7   Dsus2    0.80   # △7 → sus2 (auflösen ins Offene)
+neighbor DmMaj7   A        0.75   # △7 → V    (klassische Auflösung)
+neighbor Dsus2    DmMaj7   0.85   # sus2 → △7 (Wilson-Einstieg)
+neighbor Dsus2    Dm7      0.80   # sus2 → m7
+neighbor Dm       DmMaj7   0.90   # minor → △7  (Wilson-typisch)
+neighbor Dm       Dmaj7    0.75   # minor → Dur (elektrisierend!)
+neighbor Dm7      G7       0.90   # i → IV7   (DAS Dorian-Erkennungszeichen)
+neighbor Dmaj7    DmMaj7   0.80   # Dur → △7  (parallel shift zurück)
+neighbor Dmaj7    Gmaj7    0.85   # Dur → IV  ("Drive Home" Gefühl)
+
+# ── I–V–vi–IV in D  ("Trains"-Loop) ────────────────────────────────────
+neighbor Dmaj7    A        0.90   # I  → V
+neighbor A        Bm       0.90   # V  → vi
+neighbor Bm       G        0.90   # vi → IV
+neighbor G        Dmaj7    0.85   # IV → I    (zurück)
+neighbor G        Dm       0.70   # IV → Im   (Moll-Eintrübung, typisch PT)
+neighbor A        Dmaj7    0.75   # V  → I    (direkte Auflösung)
+neighbor Bm       Dmaj7    0.70   # vi → I
+neighbor Gmaj7    Dmaj7    0.85   # IVmaj7 → I
+
+# ── Dorian-Fluss ────────────────────────────────────────────────────────
+neighbor G7       Am7      0.80   # IV7 → v
+neighbor Am7      Dm7      0.75   # v → i     (modal, weich)
+neighbor Am7      DmMaj7   0.80   # v → △7    (Wilson-Ziel)
+neighbor Fmaj7    Dm7      0.80   # ♭III → i
+neighbor Fmaj7    Bbmaj7   0.90   # ♭III → ♭VI (Terzengang)
+neighbor Bbmaj7   Fmaj7    0.75   # ♭VI → ♭III (zurück)
+neighbor Bbmaj7   DmMaj7   0.80   # ♭VI → Kern
+
+# ── F#m-Welt ────────────────────────────────────────────────────────────
+neighbor F#m      F#mMaj7  0.85   # minor → △7 (Wilson-Signatur in F#)
+neighbor F#m      Emaj7    0.80   # i → VII   (PT "Heartattack" Gefühl)
+neighbor F#m      C#m      0.85   # i → v     (Moll-Dominante)
+neighbor F#mMaj7  A        0.80   # △7 → III  (Aufhellung)
+neighbor Emaj7    A        0.85   # VII → IV
+neighbor C#m      Emaj7    0.80   # v → VII
+neighbor A        F#m      0.75   # Dur-Mediante → Moll (Rückweg)
+
+# ── Sus-Auflösungen ─────────────────────────────────────────────────────
+neighbor Asus4    A        0.85   # sus4 → major (Auflösung)
+neighbor Asus4    Am7      0.80   # sus4 → minor
+neighbor Asus4    DmMaj7   0.70   # sus4 → △7 (Wilson-typisch)
+neighbor Gsus2    G        0.85   # sus2 → major
+neighbor Gsus2    Gmaj7    0.80   # sus2 → maj7
+
+# ── Chromatische Medianten ──────────────────────────────────────────────
+neighbor Abmaj7   DmMaj7   0.80   # ♭V → Kern (fremd → vertraut)
+neighbor Abmaj7   Bbmaj7   0.75   # Terzengang
+neighbor Cmaj7    DmMaj7   0.80   # ♭VII → Kern
+neighbor Cm       Dm       0.80   # Moll-Chromatik
+neighbor Cm       Fmaj7    0.75   # → ♭III
